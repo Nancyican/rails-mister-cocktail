@@ -1,0 +1,13 @@
+<h1>Fancy Cocktails</h1>
+
+<p id="notice"><%= notice %></p>
+<% @cocktails.each do |cocktail| %>
+<table>
+  <tr>
+    <td><%= cocktail.name %></td>
+    <td><%= link_to "Guess what!", cocktail%></td>
+  </tr>
+</table>
+<% end %>
+
+<%= link_to 'Personalise Your Cocktail', new_cocktail_path %>

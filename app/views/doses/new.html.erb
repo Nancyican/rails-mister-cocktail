@@ -1,0 +1,16 @@
+<h1>Doses#new</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-4">
+      <h2>New dose<%= @cocktail.name %></h2>
+
+      <%= simple_form_for([@cocktail, @dose]) do |f| %>
+         <%= f.input :description %>
+         <%= f.association :ingredient, collection: Ingredient.all %>
+         <%= f.button :submit %>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+<%= link_to 'back', cocktails_path %>
